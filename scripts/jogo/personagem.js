@@ -8,6 +8,7 @@ class Personagem extends Animacao {
     this.alturaDoPulo = -30
     this.gravidade = 3;
     this.puloDuplo = 0;
+    this.podePular = true;
     
   }
   
@@ -15,6 +16,8 @@ class Personagem extends Animacao {
     if(this.puloDuplo < 2) {
       this.velocidadeDoPulo = this.alturaDoPulo;
       this.puloDuplo++;
+    } else {
+      this.podePular = false;
     }
   }
   
@@ -24,6 +27,7 @@ class Personagem extends Animacao {
     if(this.y > this.yInicial) {
       this.y = this.yInicial;
       this.puloDuplo = 0;
+      this.podePular = true;
     }
   }
   

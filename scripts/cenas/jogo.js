@@ -20,7 +20,9 @@ class Jogo {
     keyPressed(key) {
         if(key === 'ArrowUp') {
             personagem.pula();
-            somDoPulo.play();
+            if(personagem.podePular) {
+                somDoPulo.play();
+            }
          }
     }
 
