@@ -42,7 +42,7 @@ class Jogo {
         inimigo.move();
 
         if(inimigoVisivel) {
-            inimigoAtual++;
+            inimigoAtual = parseInt(random(0,3));
             if(inimigoAtual > 2) {
             inimigoAtual = 0;
             }
