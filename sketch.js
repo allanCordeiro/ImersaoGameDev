@@ -1,6 +1,7 @@
-jogo = new Jogo();
-telaInicial = new TelaInicial();
+
 function setup() {
+  jogo = new Jogo();
+  telaInicial = new TelaInicial();
   createCanvas(windowWidth, windowHeight);
   jogo.setup();
   cenas = {
@@ -9,7 +10,8 @@ function setup() {
   };
 
   botaoGerenciador = new BotaoGerenciador('Iniciar', (width / 2), (height / 2));
-  //somDoJogo.loop();
+  somDoJogo.setVolume(0.05);
+  somDoJogo.loop();
   frameRate(40);    
 }
 
